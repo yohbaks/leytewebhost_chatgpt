@@ -184,22 +184,27 @@
         </div>
         <div class="global-grid">
           <div class="map-copy">
-            <div class="stat">25+ regions</div>
+            <div class="stat">35+ regions</div>
             <h3>Performance tuned for every region.</h3>
             <p>Our Anycast edge intelligently routes traffic to the closest healthy PoP. Compliance and residency needs are covered with trusted partners and sovereign options.</p>
             <div class="country-tags" aria-label="Global locations">
               <button class="country-chip" data-country="usa" data-flag="🇺🇸">USA</button>
+              <button class="country-chip" data-country="canada" data-flag="🇨🇦">Canada</button>
               <button class="country-chip" data-country="uk" data-flag="🇬🇧">UK</button>
               <button class="country-chip" data-country="france" data-flag="🇫🇷">France</button>
               <button class="country-chip" data-country="germany" data-flag="🇩🇪">Germany</button>
               <button class="country-chip" data-country="spain" data-flag="🇪🇸">Spain</button>
               <button class="country-chip" data-country="sweden" data-flag="🇸🇪">Sweden</button>
+              <button class="country-chip" data-country="poland" data-flag="🇵🇱">Poland</button>
+              <button class="country-chip" data-country="italy" data-flag="🇮🇹">Italy</button>
               <button class="country-chip" data-country="finland" data-flag="🇫🇮">Finland</button>
               <button class="country-chip" data-country="switzerland" data-flag="🇨🇭">Switzerland</button>
               <button class="country-chip" data-country="mexico" data-flag="🇲🇽">Mexico</button>
               <button class="country-chip" data-country="brazil" data-flag="🇧🇷">Brazil</button>
+              <button class="country-chip" data-country="chile" data-flag="🇨🇱">Chile</button>
               <button class="country-chip" data-country="nigeria" data-flag="🇳🇬">Nigeria</button>
               <button class="country-chip" data-country="south-africa" data-flag="🇿🇦">South Africa</button>
+              <button class="country-chip" data-country="israel" data-flag="🇮🇱">Israel</button>
               <button class="country-chip" data-country="uae" data-flag="🇦🇪">UAE</button>
               <button class="country-chip" data-country="india" data-flag="🇮🇳">India</button>
               <button class="country-chip" data-country="hong-kong" data-flag="🇭🇰">Hong Kong</button>
@@ -208,32 +213,58 @@
               <button class="country-chip" data-country="south-korea" data-flag="🇰🇷">South Korea</button>
               <button class="country-chip" data-country="japan" data-flag="🇯🇵">Japan</button>
               <button class="country-chip" data-country="taiwan" data-flag="🇹🇼">Taiwan</button>
+              <button class="country-chip" data-country="australia" data-flag="🇦🇺">Australia</button>
             </div>
             <div class="map-footnote">Hover or focus a location to see the live route glow.</div>
           </div>
           <div class="map-panel" aria-label="World map with data centre pins">
             <div class="map-silhouette" role="presentation"></div>
             <div class="map-pins">
-              <button class="map-pin" data-country="usa" style="--x: 23%; --y: 42%;">🇺🇸<span>USA</span></button>
+              <!-- North America -->
+              <button class="map-pin" data-country="usa" style="--x: 18%; --y: 42%;">🇺🇸<span>USA West</span></button>
+              <button class="map-pin" data-country="usa" style="--x: 22%; --y: 43%;">🇺🇸<span>USA Central</span></button>
+              <button class="map-pin" data-country="usa" style="--x: 26%; --y: 41%;">🇺🇸<span>USA East</span></button>
+              <button class="map-pin" data-country="canada" style="--x: 20%; --y: 35%;">🇨🇦<span>Canada West</span></button>
+              <button class="map-pin" data-country="canada" style="--x: 24%; --y: 36%;">🇨🇦<span>Canada Central</span></button>
+              <button class="map-pin" data-country="canada" style="--x: 28%; --y: 37%;">🇨🇦<span>Canada East</span></button>
+              <button class="map-pin" data-country="mexico" style="--x: 18%; --y: 50%;">🇲🇽<span>Mexico</span></button>
+
+              <!-- Europe -->
               <button class="map-pin" data-country="uk" style="--x: 38%; --y: 33%;">🇬🇧<span>UK</span></button>
               <button class="map-pin" data-country="france" style="--x: 40%; --y: 37%;">🇫🇷<span>France</span></button>
               <button class="map-pin" data-country="germany" style="--x: 42%; --y: 35%;">🇩🇪<span>Germany</span></button>
               <button class="map-pin" data-country="spain" style="--x: 39%; --y: 41%;">🇪🇸<span>Spain</span></button>
+              <button class="map-pin" data-country="italy" style="--x: 42%; --y: 41%;">🇮🇹<span>Italy</span></button>
               <button class="map-pin" data-country="sweden" style="--x: 43%; --y: 28%;">🇸🇪<span>Sweden</span></button>
-              <button class="map-pin" data-country="finland" style="--x: 45%; --y: 27%;">🇫🇮<span>Finland</span></button>
-              <button class="map-pin" data-country="switzerland" style="--x: 42%; --y: 39%;">🇨🇭<span>Switzerland</span></button>
-              <button class="map-pin" data-country="mexico" style="--x: 18%; --y: 50%;">🇲🇽<span>Mexico</span></button>
+              <button class="map-pin" data-country="poland" style="--x: 44%; --y: 33%;">🇵🇱<span>Poland</span></button>
+              <button class="map-pin" data-country="finland" style="--x: 45%; --y: 26%;">🇫🇮<span>Finland</span></button>
+              <button class="map-pin" data-country="switzerland" style="--x: 41%; --y: 38%;">🇨🇭<span>Switzerland</span></button>
+
+              <!-- South America -->
               <button class="map-pin" data-country="brazil" style="--x: 27%; --y: 67%;">🇧🇷<span>Brazil</span></button>
+              <button class="map-pin" data-country="chile" style="--x: 22%; --y: 75%;">🇨🇱<span>Chile</span></button>
+
+              <!-- Africa -->
               <button class="map-pin" data-country="nigeria" style="--x: 42%; --y: 60%;">🇳🇬<span>Nigeria</span></button>
               <button class="map-pin" data-country="south-africa" style="--x: 44%; --y: 76%;">🇿🇦<span>South Africa</span></button>
+
+              <!-- Middle East -->
+              <button class="map-pin" data-country="israel" style="--x: 47%; --y: 46%;">🇮🇱<span>Israel</span></button>
               <button class="map-pin" data-country="uae" style="--x: 50%; --y: 52%;">🇦🇪<span>UAE</span></button>
-              <button class="map-pin" data-country="india" style="--x: 55%; --y: 55%;">🇮🇳<span>India</span></button>
-              <button class="map-pin" data-country="hong-kong" style="--x: 64%; --y: 54%;">🇭🇰<span>Hong Kong</span></button>
-              <button class="map-pin" data-country="thailand" style="--x: 61%; --y: 58%;">🇹🇭<span>Thailand</span></button>
+
+              <!-- Asia -->
+              <button class="map-pin" data-country="india" style="--x: 55%; --y: 54%;">🇮🇳<span>India</span></button>
               <button class="map-pin" data-country="singapore" style="--x: 62%; --y: 63%;">🇸🇬<span>Singapore</span></button>
-              <button class="map-pin" data-country="south-korea" style="--x: 64%; --y: 44%;">🇰🇷<span>South Korea</span></button>
-              <button class="map-pin" data-country="japan" style="--x: 68%; --y: 44%;">🇯🇵<span>Japan</span></button>
+              <button class="map-pin" data-country="thailand" style="--x: 61%; --y: 58%;">🇹🇭<span>Thailand</span></button>
+              <button class="map-pin" data-country="hong-kong" style="--x: 64%; --y: 53%;">🇭🇰<span>Hong Kong</span></button>
               <button class="map-pin" data-country="taiwan" style="--x: 65%; --y: 50%;">🇹🇼<span>Taiwan</span></button>
+              <button class="map-pin" data-country="south-korea" style="--x: 66%; --y: 44%;">🇰🇷<span>South Korea</span></button>
+              <button class="map-pin" data-country="japan" style="--x: 68%; --y: 42%;">🇯🇵<span>Japan North</span></button>
+              <button class="map-pin" data-country="japan" style="--x: 69%; --y: 45%;">🇯🇵<span>Japan South</span></button>
+
+              <!-- Oceania -->
+              <button class="map-pin" data-country="australia" style="--x: 72%; --y: 78%;">🇦🇺<span>Australia East</span></button>
+              <button class="map-pin" data-country="australia" style="--x: 68%; --y: 79%;">🇦🇺<span>Australia West</span></button>
             </div>
           </div>
         </div>
