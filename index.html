@@ -177,63 +177,80 @@
       </section>
 
       <section class="global" id="network">
-        <div class="section-head">
-          <p class="eyebrow">Global footprint</p>
-          <h2>Data centres and CDN edges where your customers are.</h2>
-          <p class="lede">Optimised routes, compliance-ready regions, and low-latency ingress points around the world.</p>
-        </div>
-        <div class="global-grid">
-          <div class="map-copy">
-            <div class="stat">25+ regions</div>
-            <h3>Performance tuned for every region.</h3>
-            <p>Our Anycast edge intelligently routes traffic to the closest healthy PoP. Compliance and residency needs are covered with trusted partners and sovereign options.</p>
-            <div class="country-tags" aria-label="Global locations">
-              <button class="country-chip" data-country="usa" data-flag="🇺🇸">USA</button>
-              <button class="country-chip" data-country="uk" data-flag="🇬🇧">UK</button>
-              <button class="country-chip" data-country="france" data-flag="🇫🇷">France</button>
-              <button class="country-chip" data-country="germany" data-flag="🇩🇪">Germany</button>
-              <button class="country-chip" data-country="spain" data-flag="🇪🇸">Spain</button>
-              <button class="country-chip" data-country="sweden" data-flag="🇸🇪">Sweden</button>
-              <button class="country-chip" data-country="finland" data-flag="🇫🇮">Finland</button>
-              <button class="country-chip" data-country="switzerland" data-flag="🇨🇭">Switzerland</button>
-              <button class="country-chip" data-country="mexico" data-flag="🇲🇽">Mexico</button>
-              <button class="country-chip" data-country="brazil" data-flag="🇧🇷">Brazil</button>
-              <button class="country-chip" data-country="nigeria" data-flag="🇳🇬">Nigeria</button>
-              <button class="country-chip" data-country="south-africa" data-flag="🇿🇦">South Africa</button>
-              <button class="country-chip" data-country="uae" data-flag="🇦🇪">UAE</button>
-              <button class="country-chip" data-country="india" data-flag="🇮🇳">India</button>
-              <button class="country-chip" data-country="hong-kong" data-flag="🇭🇰">Hong Kong</button>
-              <button class="country-chip" data-country="thailand" data-flag="🇹🇭">Thailand</button>
-              <button class="country-chip" data-country="singapore" data-flag="🇸🇬">Singapore</button>
-              <button class="country-chip" data-country="south-korea" data-flag="🇰🇷">South Korea</button>
-              <button class="country-chip" data-country="japan" data-flag="🇯🇵">Japan</button>
-              <button class="country-chip" data-country="taiwan" data-flag="🇹🇼">Taiwan</button>
+        <div class="global-container">
+          <div class="global-grid">
+            <div class="map-copy">
+              <div class="map-header">
+                <div class="location-icon">📍</div>
+                <div>
+                  <h2>Global data centre locations</h2>
+                  <p>Our global data centres and CDN nodes deliver lightning-fast speeds wherever your traffic is coming from.</p>
+                </div>
+              </div>
             </div>
-            <div class="map-footnote">Hover or focus a location to see the live route glow.</div>
+            <div class="map-panel" aria-label="World map with data centre pins">
+              <div class="map-silhouette" role="presentation"></div>
+              <div class="map-pins">
+                <button class="map-pin" data-country="usa" data-location="Virginia, USA" style="--x: 25.5%; --y: 56%;">🇺🇸<span>Virginia, USA</span></button>
+                <button class="map-pin" data-country="usa" data-location="California, USA" style="--x: 14%; --y: 52%;">🇺🇸<span>California, USA</span></button>
+                <button class="map-pin" data-country="uk" data-location="London, UK" style="--x: 46%; --y: 61.5%;">🇬🇧<span>London, UK</span></button>
+                <button class="map-pin" data-country="france" data-location="Paris, France" style="--x: 48%; --y: 59%;">🇫🇷<span>Paris, France</span></button>
+                <button class="map-pin" data-country="germany" data-location="Frankfurt, Germany" style="--x: 51%; --y: 61%;">🇩🇪<span>Frankfurt, Germany</span></button>
+                <button class="map-pin" data-country="spain" data-location="Madrid, Spain" style="--x: 45.5%; --y: 56%;">🇪🇸<span>Madrid, Spain</span></button>
+                <button class="map-pin" data-country="sweden" data-location="Stockholm, Sweden" style="--x: 58%; --y: 77%;">🇸🇪<span>Stockholm, Sweden</span></button>
+                <button class="map-pin" data-country="finland" data-location="Helsinki, Finland" style="--x: 59.5%; --y: 78%;">🇫🇮<span>Helsinki, Finland</span></button>
+                <button class="map-pin" data-country="switzerland" data-location="Zürich, Switzerland" style="--x: 50.5%; --y: 59%;">🇨🇭<span>Zürich, Switzerland</span></button>
+                <button class="map-pin" data-country="brazil" data-location="São Paulo, Brazil" style="--x: 32%; --y: 20%;">🇧🇷<span>São Paulo, Brazil</span></button>
+                <button class="map-pin" data-country="south-africa" data-location="Cape Town, SA" style="--x: 51.5%; --y: 19%;">🇿🇦<span>Cape Town, SA</span></button>
+                <button class="map-pin" data-country="uae" data-location="Dubai, UAE" style="--x: 63%; --y: 46%;">🇦🇪<span>Dubai, UAE</span></button>
+                <button class="map-pin" data-country="india" data-location="Mumbai, India" style="--x: 67%; --y: 46%;">🇮🇳<span>Mumbai, India</span></button>
+                <button class="map-pin" data-country="hong-kong" data-location="Hong Kong" style="--x: 80%; --y: 47%;">🇭🇰<span>Hong Kong</span></button>
+                <button class="map-pin" data-country="singapore" data-location="Singapore" style="--x: 78%; --y: 37%;">🇸🇬<span>Singapore</span></button>
+                <button class="map-pin" data-country="south-korea" data-location="Seoul, South Korea" style="--x: 83%; --y: 55.5%;">🇰🇷<span>Seoul, South Korea</span></button>
+                <button class="map-pin" data-country="japan" data-location="Tokyo, Japan" style="--x: 86.5%; --y: 55%;">🇯🇵<span>Tokyo, Japan</span></button>
+                <button class="map-pin" data-country="australia" data-location="Sydney, Australia" style="--x: 89.5%; --y: 16%;">🇦🇺<span>Sydney, Australia</span></button>
+              </div>
+            </div>
           </div>
-          <div class="map-panel" aria-label="World map with data centre pins">
-            <div class="map-silhouette" role="presentation"></div>
-            <div class="map-pins">
-              <button class="map-pin" data-country="usa" style="--x: 23%; --y: 42%;">🇺🇸<span>USA</span></button>
-              <button class="map-pin" data-country="uk" style="--x: 38%; --y: 33%;">🇬🇧<span>UK</span></button>
-              <button class="map-pin" data-country="france" style="--x: 40%; --y: 37%;">🇫🇷<span>France</span></button>
-              <button class="map-pin" data-country="germany" style="--x: 42%; --y: 35%;">🇩🇪<span>Germany</span></button>
-              <button class="map-pin" data-country="spain" style="--x: 39%; --y: 41%;">🇪🇸<span>Spain</span></button>
-              <button class="map-pin" data-country="sweden" style="--x: 43%; --y: 28%;">🇸🇪<span>Sweden</span></button>
-              <button class="map-pin" data-country="finland" style="--x: 45%; --y: 27%;">🇫🇮<span>Finland</span></button>
-              <button class="map-pin" data-country="switzerland" style="--x: 42%; --y: 39%;">🇨🇭<span>Switzerland</span></button>
-              <button class="map-pin" data-country="mexico" style="--x: 18%; --y: 50%;">🇲🇽<span>Mexico</span></button>
-              <button class="map-pin" data-country="brazil" style="--x: 27%; --y: 67%;">🇧🇷<span>Brazil</span></button>
-              <button class="map-pin" data-country="nigeria" style="--x: 42%; --y: 60%;">🇳🇬<span>Nigeria</span></button>
-              <button class="map-pin" data-country="south-africa" style="--x: 44%; --y: 76%;">🇿🇦<span>South Africa</span></button>
-              <button class="map-pin" data-country="uae" style="--x: 50%; --y: 52%;">🇦🇪<span>UAE</span></button>
-              <button class="map-pin" data-country="india" style="--x: 55%; --y: 55%;">🇮🇳<span>India</span></button>
-              <button class="map-pin" data-country="hong-kong" style="--x: 64%; --y: 54%;">🇭🇰<span>Hong Kong</span></button>
-              <button class="map-pin" data-country="thailand" style="--x: 61%; --y: 58%;">🇹🇭<span>Thailand</span></button>
-              <button class="map-pin" data-country="singapore" style="--x: 62%; --y: 63%;">🇸🇬<span>Singapore</span></button>
-              <button class="map-pin" data-country="south-korea" style="--x: 64%; --y: 44%;">🇰🇷<span>South Korea</span></button>
-              <button class="map-pin" data-country="japan" style="--x: 68%; --y: 44%;">🇯🇵<span>Japan</span></button>
-              <button class="map-pin" data-country="taiwan" style="--x: 65%; --y: 50%;">🇹🇼<span>Taiwan</span></button>
+          <div class="locations-grid">
+            <div class="location-column">
+              <h3>North America</h3>
+              <ul>
+                <li><span class="flag">🇺🇸</span> Virginia, USA</li>
+                <li><span class="flag">🇺🇸</span> California, USA</li>
+                <li><span class="flag">🇨🇦</span> Toronto, Canada</li>
+              </ul>
+            </div>
+            <div class="location-column">
+              <h3>Europe</h3>
+              <ul>
+                <li><span class="flag">🇬🇧</span> London, UK</li>
+                <li><span class="flag">🇫🇷</span> Paris, France</li>
+                <li><span class="flag">🇩🇪</span> Frankfurt, Germany</li>
+                <li><span class="flag">🇪🇸</span> Madrid, Spain</li>
+                <li><span class="flag">🇸🇪</span> Stockholm, Sweden</li>
+                <li><span class="flag">🇫🇮</span> Helsinki, Finland</li>
+                <li><span class="flag">🇨🇭</span> Zürich, Switzerland</li>
+              </ul>
+            </div>
+            <div class="location-column">
+              <h3>Asia & Oceania</h3>
+              <ul>
+                <li><span class="flag">🇮🇳</span> Mumbai, India</li>
+                <li><span class="flag">🇭🇰</span> Hong Kong</li>
+                <li><span class="flag">🇸🇬</span> Singapore</li>
+                <li><span class="flag">🇰🇷</span> Seoul, South Korea</li>
+                <li><span class="flag">🇯🇵</span> Tokyo, Japan</li>
+                <li><span class="flag">🇦🇺</span> Sydney, Australia</li>
+              </ul>
+            </div>
+            <div class="location-column">
+              <h3>Middle East & Other</h3>
+              <ul>
+                <li><span class="flag">🇦🇪</span> Dubai, UAE</li>
+                <li><span class="flag">🇧🇷</span> São Paulo, Brazil</li>
+                <li><span class="flag">🇿🇦</span> Cape Town, SA</li>
+              </ul>
             </div>
           </div>
         </div>
