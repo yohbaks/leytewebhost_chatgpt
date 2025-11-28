@@ -140,14 +140,24 @@ main {
 }
 
 .global {
-  width: 100%;
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   background: #ffffff;
   color: #0b1224;
   border: 1px solid #e4e8f3;
   border-radius: calc(var(--radius) * 1.2);
-  padding: 32px;
+  padding: 52px 32px;
   box-shadow: 0 25px 70px rgba(6, 19, 49, 0.12);
   overflow: hidden;
+}
+
+.global .section-head,
+.global .global-grid {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .global .section-head h2,
