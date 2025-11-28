@@ -397,11 +397,18 @@ main {
   gap: 12px;
   position: relative;
   overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  --price-card-glow: 0 20px 80px rgba(123, 92, 255, 0.25);
 }
 
 .price-card.featured {
   border-color: rgba(123, 92, 255, 0.6);
-  box-shadow: 0 20px 80px rgba(123, 92, 255, 0.25);
+  box-shadow: var(--price-card-glow);
+}
+
+.price-card:not(.featured):hover {
+  border-color: rgba(123, 92, 255, 0.6);
+  box-shadow: var(--price-card-glow);
 }
 
 .price-card .badge {
