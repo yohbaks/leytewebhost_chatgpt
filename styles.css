@@ -240,26 +240,35 @@ main {
 
 .map-panel {
   position: relative;
-  min-height: 360px;
-  background: radial-gradient(circle at 60% 20%, rgba(123, 92, 255, 0.14), transparent 40%),
-              radial-gradient(circle at 35% 70%, rgba(61, 227, 180, 0.16), transparent 42%),
-              linear-gradient(180deg, #0d1023, #0b0f1f 58%, #0d1228);
+  min-height: 420px;
+  background: linear-gradient(180deg, #0a0f25 0%, #0a122d 46%, #0a132e 100%);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: calc(var(--radius) * 1.4);
   overflow: hidden;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 25px 80px rgba(6, 19, 49, 0.28);
 }
 
+.map-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 28% 32%, rgba(123, 92, 255, 0.28), transparent 28%),
+              radial-gradient(circle at 70% 68%, rgba(61, 227, 180, 0.24), transparent 30%),
+              radial-gradient(circle at 75% 20%, rgba(255, 255, 255, 0.08), transparent 30%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
 .map-silhouette {
   position: absolute;
-  inset: 8%;
+  inset: 8% 6%;
   background-image:
     linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 30%),
-    url("data:image/svg+xml,%3Csvg width='900' height='460' viewBox='0 0 900 460' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.7' stroke='%23C9D4FF' stroke-width='1.4'%3E%3Cpath d='M68 202c42-80 165-116 232-59 24 21 68 46 120 50 52 3 80-17 117-41 50-32 123-61 187-38 40 14 65 62 119 61 76-1 103 87 6 147-97 60-182 17-242-17-70-40-150-62-220-18-78 49-178 62-259 16-52-29-88-73-115-128Z' fill='url(%23paint0_linear)'/%3E%3Cpath d='M74 244c24-93 153-140 229-104 31 15 59 40 98 51 43 12 86-5 121-28 54-36 123-67 193-45 44 14 69 63 128 70 84 10 110 119 5 171-108 54-198 14-270-24-79-41-168-54-247-12-88 46-185 54-271 9-64-34-101-85-121-148Z' fill='url(%23paint1_linear)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='60' y1='120' x2='820' y2='320' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%237B5CFF' stop-opacity='0.4'/%3E%3Cstop offset='1' stop-color='%233DE3B4' stop-opacity='0.16'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='74' y1='140' x2='840' y2='360' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%237B5CFF' stop-opacity='0.3'/%3E%3Cstop offset='1' stop-color='%233DE3B4' stop-opacity='0.12'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
-  background-size: cover;
+    url("data:image/svg+xml,%3Csvg width='1100' height='600' viewBox='0 0 1100 600' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23CFE2FF' fill-opacity='0.25' stroke='%23B5C6FF' stroke-width='1.4' stroke-linejoin='round'%3E%3Cpath d='M100 250c38-54 88-82 152-94 46-9 92-3 126 14 30 15 72 17 106 8 53-15 88-46 146-58 52-11 116-2 152 18 26 15 56 8 82 24 26 16 26 62-9 90-35 28-110 57-170 44-58-12-116-40-168-37-60 4-113 58-168 74-76 21-160 0-215-38-55-39-58-77-34-115Z'/%3E%3Cpath d='M280 345c45-32 88-30 124-18 26 9 53 26 84 28 42 3 83-29 119-40 41-13 86 0 122 21 23 14 47 11 67 23 32 18 32 68 2 96-43 40-100 51-150 45-64-8-117-47-181-51-69-4-137 40-202 48-56 7-118-14-147-54-38-52-7-108 62-98Z'/%3E%3Cpath d='M524 182c32-30 65-45 108-48 33-3 78 14 114 24 40 11 80 15 109 30 44 23 96 27 124 53 28 26 24 72-21 91-48 20-118 4-160-25-42-29-80-74-124-86-40-11-100 1-128-11-35-15-61-46-22-28Z'/%3E%3Cpath d='M700 375c25-18 50-26 86-26 32 0 74 22 104 36 35 16 64 32 80 50 23 25 16 64-26 74-54 13-134-3-174-37-32-26-54-72-70-76-23-6-50-12 0-21Z'/%3E%3Cpath d='M894 245c14-18 36-32 62-40 24-8 56-4 82 8 30 14 44 42 36 66-9 27-35 50-64 60-32 11-67-3-84-30-17-28-19-51-32-64Z'/%3E%3Cpath d='M896 420c15-14 32-24 52-28 22-4 54 3 76 16 21 12 32 38 25 58-8 23-31 43-58 48-28 5-56-6-70-28-14-22-20-40-25-66Z'/%3E%3Cpath d='M208 380c30-22 57-20 82-14 26 6 43 22 58 38 16 18 10 42-16 54-28 13-64 10-92-4-30-16-56-38-32-74Z'/%3E%3Cpath d='M640 446c18-11 38-14 62-10 24 4 56 25 76 40 20 15 32 28 34 42 3 20-10 34-36 36-36 3-82-16-104-40-18-20-34-42-32-68Z'/%3E%3Cpath d='M508 418c14-13 36-14 52-10 16 4 28 14 38 26 10 12 6 30-10 40-18 11-42 9-58-2-18-13-38-30-22-54Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.25)) saturate(1.1);
+  filter: drop-shadow(0 12px 36px rgba(0, 0, 0, 0.3)) saturate(1.2);
 }
 
 .map-pins {
