@@ -139,6 +139,146 @@ main {
   gap: 80px;
 }
 
+.global {
+  background: radial-gradient(circle at 25% 20%, rgba(123, 92, 255, 0.08), transparent 32%),
+              radial-gradient(circle at 80% 0%, rgba(61, 227, 180, 0.08), transparent 30%),
+              rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) * 1.2);
+  padding: 32px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.global-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  align-items: center;
+}
+
+.map-copy {
+  display: grid;
+  gap: 12px;
+}
+
+.map-copy .stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(61, 227, 180, 0.12);
+  color: #d5f9ed;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(61, 227, 180, 0.3);
+  font-weight: 700;
+  width: fit-content;
+}
+
+.country-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.country-chip {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.country-chip:hover,
+.country-chip:focus-visible,
+.country-chip.active {
+  border-color: rgba(123, 92, 255, 0.6);
+  box-shadow: 0 10px 40px rgba(123, 92, 255, 0.24);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.map-footnote {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.map-panel {
+  position: relative;
+  min-height: 360px;
+  background: radial-gradient(circle at 60% 20%, rgba(123, 92, 255, 0.12), transparent 35%),
+              radial-gradient(circle at 30% 80%, rgba(61, 227, 180, 0.1), transparent 40%),
+              rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) * 1.4);
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.map-silhouette {
+  position: absolute;
+  inset: 10%;
+  background-image: url("data:image/svg+xml,%3Csvg width='800' height='400' viewBox='0 0 800 400' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.14' d='M105 170c40-55 130-70 175-18 22 25 60 45 103 48 45 3 65-17 96-38 41-28 95-45 141-28 30 11 47 48 91 48 58 0 71 66 8 104-63 38-126 13-169-12-52-31-114-43-167-10-58 36-136 43-199 15-40-18-69-46-89-78-19-30-35-68 10-131Z' fill='%23B9B5FF'/%3E%3Cpath opacity='0.12' d='M76 209c13-73 88-107 145-87 25 9 40 26 68 36 33 12 68-1 95-18 42-27 91-48 147-31 35 11 55 53 103 57 68 6 85 85 13 124-74 40-138 15-187-14-52-30-112-39-168-9-61 32-132 37-193 7-47-23-74-59-83-97Z' fill='%233DE3B4'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(1px) brightness(1.1);
+}
+
+.map-pins {
+  position: absolute;
+  inset: 0;
+}
+
+.map-pin {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  background: rgba(5, 5, 16, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 6px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  font-weight: 700;
+}
+
+.map-pin span {
+  font-size: 12px;
+}
+
+.map-pin:hover,
+.map-pin:focus-visible,
+.map-pin.active {
+  transform: translate(-50%, -50%) scale(1.05);
+  border-color: rgba(123, 92, 255, 0.7);
+  box-shadow: 0 10px 40px rgba(123, 92, 255, 0.35);
+  outline: none;
+  animation: pulse 1.6s ease infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(123, 92, 255, 0.45); }
+  70% { box-shadow: 0 0 0 14px rgba(123, 92, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(123, 92, 255, 0); }
+}
+
+.map-panel::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: calc(var(--radius) * 1.4);
+  border: 1px dashed rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
 .hero {
   position: relative;
   border: 1px solid var(--border);
