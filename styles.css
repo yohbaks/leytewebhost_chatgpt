@@ -140,14 +140,25 @@ main {
 }
 
 .global {
-  background: radial-gradient(circle at 25% 20%, rgba(123, 92, 255, 0.08), transparent 32%),
-              radial-gradient(circle at 80% 0%, rgba(61, 227, 180, 0.08), transparent 30%),
-              rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border);
+  width: 100%;
+  background: #ffffff;
+  color: #0b1224;
+  border: 1px solid #e4e8f3;
   border-radius: calc(var(--radius) * 1.2);
   padding: 32px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 25px 70px rgba(6, 19, 49, 0.12);
   overflow: hidden;
+}
+
+.global .section-head h2,
+.global .map-copy h3 {
+  color: #0b1224;
+}
+
+.global .section-head .lede,
+.global .map-copy p,
+.global .map-footnote {
+  color: #4e5873;
 }
 
 .global-grid {
@@ -167,13 +178,14 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(61, 227, 180, 0.12);
-  color: #d5f9ed;
+  background: linear-gradient(135deg, rgba(123, 92, 255, 0.12), rgba(61, 227, 180, 0.12));
+  color: #2d1c4f;
   padding: 8px 12px;
   border-radius: 12px;
-  border: 1px solid rgba(61, 227, 180, 0.3);
-  font-weight: 700;
+  border: 1px solid rgba(123, 92, 255, 0.35);
+  font-weight: 800;
   width: fit-content;
+  box-shadow: 0 10px 30px rgba(123, 92, 255, 0.12);
 }
 
 .country-tags {
@@ -183,19 +195,30 @@ main {
 }
 
 .country-chip {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text);
+  position: relative;
+  background: linear-gradient(145deg, #f5f7fb, #ffffff);
+  color: #0b1224;
   border-radius: 999px;
-  padding: 8px 12px;
-  border: 1px solid var(--border);
+  padding: 8px 12px 8px 36px;
+  border: 1px solid #e4e8f3;
   transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 12px 28px rgba(6, 19, 49, 0.08);
+}
+
+.country-chip::before {
+  content: attr(data-flag);
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
 }
 
 .country-chip:hover,
 .country-chip:focus-visible,
 .country-chip.active {
   border-color: rgba(123, 92, 255, 0.6);
-  box-shadow: 0 10px 40px rgba(123, 92, 255, 0.24);
+  box-shadow: 0 12px 42px rgba(123, 92, 255, 0.24);
   transform: translateY(-2px);
   outline: none;
 }
@@ -208,23 +231,25 @@ main {
 .map-panel {
   position: relative;
   min-height: 360px;
-  background: radial-gradient(circle at 60% 20%, rgba(123, 92, 255, 0.12), transparent 35%),
-              radial-gradient(circle at 30% 80%, rgba(61, 227, 180, 0.1), transparent 40%),
-              rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
+  background: radial-gradient(circle at 60% 20%, rgba(123, 92, 255, 0.14), transparent 40%),
+              radial-gradient(circle at 35% 70%, rgba(61, 227, 180, 0.16), transparent 42%),
+              linear-gradient(180deg, #0d1023, #0b0f1f 58%, #0d1228);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: calc(var(--radius) * 1.4);
   overflow: hidden;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 25px 80px rgba(6, 19, 49, 0.28);
 }
 
 .map-silhouette {
   position: absolute;
-  inset: 10%;
-  background-image: url("data:image/svg+xml,%3Csvg width='800' height='400' viewBox='0 0 800 400' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.14' d='M105 170c40-55 130-70 175-18 22 25 60 45 103 48 45 3 65-17 96-38 41-28 95-45 141-28 30 11 47 48 91 48 58 0 71 66 8 104-63 38-126 13-169-12-52-31-114-43-167-10-58 36-136 43-199 15-40-18-69-46-89-78-19-30-35-68 10-131Z' fill='%23B9B5FF'/%3E%3Cpath opacity='0.12' d='M76 209c13-73 88-107 145-87 25 9 40 26 68 36 33 12 68-1 95-18 42-27 91-48 147-31 35 11 55 53 103 57 68 6 85 85 13 124-74 40-138 15-187-14-52-30-112-39-168-9-61 32-132 37-193 7-47-23-74-59-83-97Z' fill='%233DE3B4'/%3E%3C/svg%3E");
-  background-size: contain;
+  inset: 8%;
+  background-image:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 30%),
+    url("data:image/svg+xml,%3Csvg width='900' height='460' viewBox='0 0 900 460' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.7' stroke='%23C9D4FF' stroke-width='1.4'%3E%3Cpath d='M68 202c42-80 165-116 232-59 24 21 68 46 120 50 52 3 80-17 117-41 50-32 123-61 187-38 40 14 65 62 119 61 76-1 103 87 6 147-97 60-182 17-242-17-70-40-150-62-220-18-78 49-178 62-259 16-52-29-88-73-115-128Z' fill='url(%23paint0_linear)'/%3E%3Cpath d='M74 244c24-93 153-140 229-104 31 15 59 40 98 51 43 12 86-5 121-28 54-36 123-67 193-45 44 14 69 63 128 70 84 10 110 119 5 171-108 54-198 14-270-24-79-41-168-54-247-12-88 46-185 54-271 9-64-34-101-85-121-148Z' fill='url(%23paint1_linear)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='60' y1='120' x2='820' y2='320' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%237B5CFF' stop-opacity='0.4'/%3E%3Cstop offset='1' stop-color='%233DE3B4' stop-opacity='0.16'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='74' y1='140' x2='840' y2='360' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%237B5CFF' stop-opacity='0.3'/%3E%3Cstop offset='1' stop-color='%233DE3B4' stop-opacity='0.12'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  filter: blur(1px) brightness(1.1);
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.25)) saturate(1.1);
 }
 
 .map-pins {
@@ -237,15 +262,15 @@ main {
   left: var(--x);
   top: var(--y);
   transform: translate(-50%, -50%);
-  background: rgba(5, 5, 16, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 6px 8px;
+  background: linear-gradient(145deg, rgba(12, 18, 40, 0.9), rgba(20, 26, 60, 0.88));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  padding: 6px 10px 6px 8px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
   color: var(--text);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   font-weight: 700;
 }
