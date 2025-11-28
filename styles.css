@@ -148,14 +148,14 @@ main {
   color: #0b1224;
   border: 1px solid #e4e8f3;
   border-radius: calc(var(--radius) * 1.2);
-  padding: 52px 32px;
+  padding: 52px 20px;
   box-shadow: 0 25px 70px rgba(6, 19, 49, 0.12);
   overflow: hidden;
 }
 
 .global .section-head,
 .global .global-grid {
-  max-width: 1180px;
+  max-width: 1360px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -174,9 +174,9 @@ main {
 .global-grid {
   margin-top: 24px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 22px;
-  align-items: center;
+  grid-template-columns: minmax(320px, 1fr) minmax(540px, 1.55fr);
+  gap: 32px;
+  align-items: start;
 }
 
 .map-copy {
@@ -240,38 +240,36 @@ main {
 
 .map-panel {
   position: relative;
-  min-height: 420px;
-  background: radial-gradient(circle at 18% 28%, rgba(123, 92, 255, 0.22), transparent 36%),
-              radial-gradient(circle at 78% 68%, rgba(61, 227, 180, 0.18), transparent 38%),
-              linear-gradient(180deg, #0c1227 0%, #07152f 46%, #04142f 100%);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  min-height: 520px;
+  background: #fdfdff;
+  border: 1px solid #dde3f0;
   border-radius: calc(var(--radius) * 1.4);
   overflow: hidden;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 28px 90px rgba(6, 19, 49, 0.32);
+  box-shadow: 0 28px 90px rgba(6, 19, 49, 0.14);
 }
 
 .map-panel::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-              linear-gradient(0deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 80px 80px;
-  mix-blend-mode: screen;
-  opacity: 0.35;
+  background: linear-gradient(90deg, rgba(11, 18, 36, 0.04) 1px, transparent 1px),
+              linear-gradient(0deg, rgba(11, 18, 36, 0.04) 1px, transparent 1px);
+  background-size: 90px 90px;
+  mix-blend-mode: multiply;
+  opacity: 0.26;
   pointer-events: none;
 }
 
 .map-silhouette {
   position: absolute;
-  inset: 6% 5%;
-  background-image:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 45%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='800' viewBox='0 0 1400 800'%3E%3Cg fill='%23cfe2ff' fill-opacity='0.7' stroke='%23b3c7ff' stroke-width='10' stroke-linejoin='round'%3E%3Cpath d='M86 290l68-56 86-28 120 20 68-52 66-20 78 6 60 50-26 54 40 70-72 56-132 20-92-44-94-10-122-44-48-22z'/%3E%3Cpath d='M318 458l82-54 70-12 74 22 34 54-20 110-92 32-82-46-52-82z'/%3E%3Cpath d='M470 250l84-46 78-14 84 12 80 46 66 22-14 64-110 22-116-18-102-56z'/%3E%3Cpath d='M664 392l112-22 84 32 70 60-42 82-86 26-92-58-52-60z'/%3E%3Cpath d='M902 260l78-46 108-18 88 20 76 50 14 66-78 72-108 10-124-48-54-48z'/%3E%3Cpath d='M988 480l80-26 74 8 58 38 22 50-24 64-78 32-90-28-48-74z'/%3E%3Cpath d='M1106 332l48-36 58-6 64 32 28 58-24 48-58 14-62-30-40-56z'/%3E%3Cpath d='M1210 586l72-22 66 24 38 56-18 46-68 26-66-22-40-62z'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: drop-shadow(0 16px 48px rgba(0, 10, 30, 0.45)) saturate(1.05);
+  inset: 7% 4.5%;
+  background: radial-gradient(circle at 4px 4px, #d3d8e6 60%, transparent 62%) 0 0/13px 13px;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'%3E%3Cg fill='%23000'%3E%3Cpath d='M68 320l94-78 118-40 154 30 104-76 98-28 108 10 86 78-36 76 58 96-102 78-170 28-118-58-128-14-158-62-62-30z'/%3E%3Cpath d='M328 522l112-72 94-16 100 30 46 72-26 148-124 44-110-62-68-110z'/%3E%3Cpath d='M540 274l114-62 106-20 114 16 110 62 90 30-18 86-152 30-160-24-140-72z'/%3E%3Cpath d='M800 480l152-30 114 44 96 82-58 112-118 36-126-78-72-82z'/%3E%3Cpath d='M1090 290l110-66 148-24 122 28 106 70 20 92-106 100-148 14-170-66-74-66z'/%3E%3Cpath d='M1200 612l112-36 104 12 82 54 32 70-34 90-106 44-122-38-64-104z'/%3E%3Cpath d='M1368 414l66-50 80-8 88 44 38 80-34 64-80 20-84-42-54-76z'/%3E%3Cpath d='M1508 734l96-30 88 32 50 74-24 62-90 36-88-30-54-82z'/%3E%3C/g%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  opacity: 0.95;
+  filter: drop-shadow(0 22px 38px rgba(9, 21, 46, 0.25));
 }
 
 .map-pins {
@@ -283,47 +281,80 @@ main {
   position: absolute;
   left: var(--x);
   top: var(--y);
-  transform: translate(-50%, -50%);
-  background: linear-gradient(145deg, rgba(12, 18, 40, 0.9), rgba(20, 26, 60, 0.88));
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 14px;
-  padding: 6px 10px 6px 8px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--text);
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-  font-weight: 700;
+  transform: translate(-50%, -70%);
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  background: #ffffff;
+  border: 2px solid #e01345;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #0b1224;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15), 0 0 0 3px rgba(255, 255, 255, 0.9);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  font-size: 20px;
+}
+
+.map-pin::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-left: 2px solid #e01345;
+  border-bottom: 2px solid #e01345;
+  transform: translate(-50%, -2px) rotate(45deg);
+  border-radius: 0 0 3px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
 .map-pin span {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 10px);
+  transform: translateX(-50%);
+  background: rgba(11, 18, 36, 0.9);
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 8px;
   font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform-origin: center top;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
 }
 
 .map-pin:hover,
 .map-pin:focus-visible,
 .map-pin.active {
-  transform: translate(-50%, -50%) scale(1.05);
-  border-color: rgba(123, 92, 255, 0.7);
-  box-shadow: 0 10px 40px rgba(123, 92, 255, 0.35);
+  transform: translate(-50%, -70%) scale(1.06);
+  border-color: #d1002f;
+  box-shadow: 0 18px 46px rgba(209, 0, 47, 0.24), 0 0 0 4px rgba(255, 255, 255, 0.95);
   outline: none;
-  animation: pulse 1.6s ease infinite;
+  filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.18));
 }
 
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(123, 92, 255, 0.45); }
-  70% { box-shadow: 0 0 0 14px rgba(123, 92, 255, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(123, 92, 255, 0); }
+.map-pin:hover span,
+.map-pin:focus-visible span,
+.map-pin.active span {
+  opacity: 1;
+  transform: translate(-50%, 4px);
 }
 
-.map-panel::after {
-  content: "";
-  position: absolute;
-  inset: 6px;
-  border-radius: calc(var(--radius) * 1.4);
-  border: 1px dashed rgba(255, 255, 255, 0.05);
-  pointer-events: none;
+@media (max-width: 980px) {
+  .global-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-panel {
+    min-height: 420px;
+  }
 }
 
 .hero {
